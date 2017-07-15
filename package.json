@@ -1,0 +1,42 @@
+{
+    "name": "xplayer",
+    "version": "0.0.1",
+    "description": "Wow, such a lovely HTML5 video player",
+    "main": "dist/XPlayer.js",
+    "style": "dist/XPlayer.css",
+    "scripts": {
+        "test": "eslint src webpack",
+        "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --colors",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --watch --colors"
+    },
+    "files": [
+        "dist"
+    ],
+    "author": "fenglinzeng",
+    "license": "WTFPL",
+    "bugs": {
+        "url": "https://brofen.cn"
+    },
+    "devDependencies": {
+        "autoprefixer": "^7.1.1",
+        "babel-core": "^6.24.1",
+        "babel-eslint": "^7.2.3",
+        "babel-loader": "^7.1.1",
+        "babel-preset-env": "*",
+        "cross-env": "^5.0.1",
+        "css-loader": "^0.28.0",
+        "exports-loader": "^0.6.4",
+        "extract-text-webpack-plugin": "^3.0.0",
+        "file-loader": "^0.11.1",
+        "git-revision-webpack-plugin": "^2.5.1",
+        "node-sass": "^4.5.0",
+        "postcss-loader": "^2.0.6",
+        "sass-loader": "^6.0.2",
+        "strip-loader": "^0.1.2",
+        "style-loader": "^0.18.1",
+        "template-string-optimize-loader": "^2.2.3",
+        "url-loader": "^0.5.7",
+        "webpack": "^3.1.0",
+        "webpack-dev-server": "^2.4.5"
+    }
+}

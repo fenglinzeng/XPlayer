@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FangPlayer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style type="text/css">
+        .xplayer { width: 500px; margin: 100px auto; }
+    </style>
+</head>
+
+<body>
+    <div id="xplayer" class="xplayer"></div>
+    <script src="XPlayer.js"></script>
+    <script>
+        var xp = new XPlayer({
+            element: document.getElementById('xplayer'),
+            video: {
+                // url: 'http://7xp6cu.dl1.z0.glb.clouddn.com/360.mp4',
+                url: 'http://hbvideoagent.soufunimg.com/2018/01/24/houset/mp4/ed73a042b6174191a903e5f2c45a48b1.mp4',
+                pic: 'http://7xp6cu.dl1.z0.glb.clouddn.com/designerDesk.jpg'
+            }
+        });
+
+        var isFirst = true;
+        xp.on('play', function () {
+            console.log('play', xp.video.current.currentTime, xp.video.duration);
+            isFirst = false;
+        });
+        xp.on('pause', function () {
+            console.log('pause', xp.video.current.currentTime, xp.video.duration);
+            isFirst = false;
+        });
+        xp.on('ended', function () {
+            console.log('ended');
+            isFirst = false;
+        });
+    </script>
+</body>
+
+</html>
